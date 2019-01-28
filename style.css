@@ -1,0 +1,92 @@
+body{
+	background-color:#000;
+}
+
+@keyframes apple_blink{
+	from {box-shadow: 0px 0px 30px 0px #65fc35;}
+	50% {box-shadow: 0px 0px 10px 0px #65fc35;}
+	to {box-shadow: 0px 0px 30px 0px #65fc35;}
+}
+
+@keyframes head_blink{
+	from {box-shadow: 0px 0px 30px 0px white;}
+	50% {box-shadow: 0px 0px 10px 0px white;}
+	to {box-shadow: 0px 0px 30px 0px white;}
+}
+
+.game_field{
+	background: radial-gradient(#333, #111);
+	position:absolute;
+	top:50px;
+	left:50px;
+	bottom:50px;
+	right:400px;
+	border:1px solid #666464;
+	border-radius:1px;
+}
+
+#control_panel{
+	background: radial-gradient(#333, #111);
+	position:absolute;
+	top:50px;
+	right:50px;
+	border:1px solid #666464;
+	border-radius:1px;
+}
+
+#score{
+	padding:10px;
+	margin-left:50px;
+	margin-right:50px;
+	margin:20px;
+	width:inherit;
+	height:50px;
+	text-align:center;
+	color:white;
+	font-weight:bold;
+	font-size:28px;
+}
+
+button{
+	transition:500ms all;
+	
+	padding:10px;
+	margin-left:50px;
+	margin-right:50px;
+	margin-bottom:20px;
+	width:80px;
+	height:50px;
+	border:2px solid white;
+	color:white;
+	position:relative;
+	opacity:0.5;
+	background-color:#161616;
+	border-radius:5px;
+}
+
+button:hover{
+	opacity:1;
+	transform:scale(1.15);
+}
+
+.part{
+	width:24px;
+	height:24px;
+	border:1px solid black;
+	position:absolute;
+	background-color:white;
+	border-radius:2px;
+}
+
+.head{
+	box-shadow: 0px 0px 30px 0px white;
+	animation: head_blink 500ms infinite cubic-bezier(0, 1, 1, 1);
+}
+
+.apple{
+	box-shadow: 0px 0px 30px 0px #65fc35;
+	border:1px solid #65fc35;
+	background-color: #00ff10;
+	border-radius:3px;
+	animation: apple_blink 500ms infinite cubic-bezier(0, 1, 1, 1);
+}
